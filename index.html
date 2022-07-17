@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d4d564086a.js" crossorigin="anonymous"></script>
+    <title>Momentum</title>
+</head>
+
+<body>
+  <Nav class="hidden" id="navbar">
+    <div id="navbar__user">
+      <i class="fa-solid fa-circle-user"></i>
+      <span></span>
+      <i class="fa-solid fa-arrow-right-from-bracket" id="logout"></i>
+    </div>
+
+    <h1 class="hidden" id="upClock">00:00:00</h1>
+
+    <ul id="navbar__icon">
+      <li id="change-bg"><i class="fa-solid fa-shuffle"></i></li>
+      <li id="menu"><i class="fa-solid fa-bars"></i></li>
+    </ul>
+  </Nav>
+
+  <div id="first-screen">
+    <h1 id="clock">00:00:00</h1>
+    <!-- login -->
+    <form class="hidden" id="login-form">
+      <input required maxlength="15" type="text" placeholder="Write your name and Enter">
+    </form>
+    <h1 class="hidden" id="greeting"></h1>
+  </div>
+  <!-- Random-quote -->
+  <div class="hidden" id="quote">
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="hidden" id="open-menu">
+    <div id="todo-list">
+      <div id="todo-head">
+        <div id="todo-day"></div>
+        <div id="todo-date"></div>
+      </div>
+      <form id="todo-form">
+        <input required type="text" placeholder="What to do today">
+      </form>
+      <ul id="list"></ul>
+    </div>
+
+    <div id="weather">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="d-day">
+      <form id="special-day-form">
+        <input required type="text" placeholder="D-Day Title">
+        <div id="newday">
+          <input required type="number" id="D-Year" placeholder="년">
+          <input required type="number" id="D-Month" placeholder="월">
+          <input required type="number" id="D-Date" placeholder="일">
+        </div>
+        <input type="submit" value="confirm">
+      </form>
+      <div id="result">
+        <span id="dday-title"></span>
+        <span id="dday"></span>
+        <button id="modify">Modify</button>
+      </div>
+    </div>
+
+    <div id="option">
+      <span>Relaxing Video</span>
+      <video controls src="img/Nature - 108302.mp4" width="500" height="300"></video>
+    </div>
+    
+  </div>
+
+
+
+  <!-- js file connect -->
+  <script src="js/clock.js"></script>
+  <script type="module" src="js/greeting.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/logout.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/dday.js"></script>
+  <!-- <script src="js/quote.js"></script> -->
+</body>
+</html>
